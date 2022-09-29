@@ -7,6 +7,10 @@
   align-items: flex-start;
 }
 
+.main.dark {
+  background: #5C5470;
+}
+
 .container {
   box-sizing: border-box;
   width: 800px;
@@ -22,6 +26,10 @@
   justify-content: flex-start;
   align-items: flex-start;
   animation: loadPage 0.4s linear forwards;
+}
+
+.dark .container {
+  background-color: #DBD8E3;
 }
 
 .textBox {

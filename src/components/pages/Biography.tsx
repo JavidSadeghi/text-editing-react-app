@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-
-import { AppState } from '../../redux/main/mainReducer';
 
 // Styles
 import styles from './Biography.module.css';
@@ -16,16 +14,21 @@ import linkedinIcon from '../../assets/iconmonstr-linkedin-3.svg';
 import githubIcon from '../../assets/iconmonstr-github-3.svg';
 
 
-// type Props  = {
-//   showBioModalHandler: () => void;
-// }
+
+type Props  = {
+  showBioModal: () => void;
+  theme: string;
+}
 
 
-class Biography extends Component{
+class Biography extends React.Component<Props>{
     state = {
       showBioModal: false
     }
 
+    componentDidMount(): void {
+      this.props.showBioModal();
+    }
 
 
   public showBioModalFunc = () => {
@@ -41,8 +44,8 @@ class Biography extends Component{
   
   render() {
   return (
-    <div className={styles.main}>
-      {this.state.showBioModal ? <BiographyModal closeBioModal={this.closeBioModalFunc} /> : null}
+    <div className={`${styles.main} ${styles[this.props.theme]}`}>
+      {this.state.showBioModal ? <BiographyModal closeBioModal={this.closeBioModalFunc} theme={this.props.theme} /> : null}
       <div className={styles.container}>
         <div className={styles.personalImage}>
           <img src={myImage} alt="Personal_Image" />

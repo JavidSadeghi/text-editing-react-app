@@ -7,6 +7,10 @@
   align-items: flex-start;
 }
 
+.main.dark {
+  background: #5C5470;
+}
+
 .container {
   box-sizing: border-box;
   width: 800px;
@@ -24,11 +28,18 @@
   animation: loadPage 0.4s linear forwards;
 }
 
+.dark .container {
+  background-color: #DBD8E3;
+}
+
 .toolbarClass {
   background-color: #4E7E95;
   border-radius: 15px 15px 0 0;
   height: 90px;
-  
+}
+
+.dark .toolbarClass {
+  background-color: #352F44;
 }
 
 
@@ -67,6 +78,11 @@
 
 #saved {
   color: #FF834D;
+}
+
+.dark .saveBtn {
+  background-color: #352F44;
+  color: #DBD8E3;
 }
 
 

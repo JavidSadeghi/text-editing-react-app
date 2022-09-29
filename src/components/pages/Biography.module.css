@@ -1,11 +1,14 @@
 .main {
   width: 100%;
   height: calc(100vh - 70px);
-  /* background-color: #A0C9DD; */
   background: linear-gradient(90deg, rgba(123,167,189,1) 20%, rgba(160,201,221,1) 100%);
   display: flex;
   justify-content: center;
   align-items: flex-start;
+}
+
+.main.dark {
+  background: #5C5470;
 }
 
 .container {
@@ -21,6 +24,10 @@
   justify-content: flex-start;
   align-items: flex-end;
   animation: loadPage 0.4s linear forwards;
+}
+
+.dark .container {
+  background-color: #DBD8E3;
 }
 
 .personalImage {
@@ -73,6 +80,11 @@
   margin-top: 10px;
 }
 
+.dark .detailsBox h2,
+.dark .detailsBox h3 {
+  color: #2A2438;
+}
+
 .detailsBox h4 {
   font-family: 'Inter';
   font-style: normal;
@@ -83,6 +95,10 @@
   cursor: pointer;
   transition: all 0.1s ease-in;
   margin-top: 20px;
+}
+
+.dark .detailsBox h4 {
+  color: #5C5470;
 }
 
 .detailsBox h4:hover {
@@ -110,6 +126,10 @@
   width: 24px;
   height: 24px;
   transition: all 0.1s ease-in;
+}
+
+.dark .socialMedia a img {
+  filter: invert(20%);
 }
 
 .socialMedia a:hover img {

@@ -31,6 +31,10 @@
   animation: openModal 0.6s linear forwards;
 }
 
+.dark .container {
+  background-color: #5C5470;
+}
+
 .container * {
   margin: 0;
   padding: 0;
@@ -56,8 +60,16 @@
   transition: all 0.1s ease-in;
 }
 
+.dark .closeBtn img {
+  filter: invert(10%);
+}
+
 .closeBtn:hover img {
   filter: invert(100%);
+}
+
+.dark .closeBtn:hover img {
+  filter: invert(0);
 }
 
 .container h3 {
@@ -71,11 +83,19 @@
   margin-top: 5px;
 }
 
+.dark .container h3 {
+  color: #DBD8E3;
+}
+
 .horLine {
   width: 80%;
   height: 1.5px;
   background-color: #0B0C28;
   margin-top: 5px;
+}
+
+.dark .horLine {
+  background-color: #DBD8E3;
 }
 
 
@@ -96,6 +116,10 @@
   height: 20px;
 }
 
+.dark .phoneBox img {
+  filter: invert(80%);
+}
+
 .phoneBox h5 {
   font-family: 'Inter';
   font-style: normal;
@@ -103,6 +127,10 @@
   font-size: 18px;
   line-height: 24px;
   color: #0B0C28;
+}
+
+.dark .phoneBox h5 {
+  color: #DBD8E3;
 }
 
 
@@ -122,6 +150,10 @@
   height: 20px;
 }
 
+.dark .emailBox img {
+  filter: invert(80%);
+}
+
 .emailBox h5 {
   font-family: 'Inter';
   font-style: normal;
@@ -129,6 +161,10 @@
   font-size: 18px;
   line-height: 24px;
   color: #0B0C28;
+}
+
+.dark .emailBox h5 {
+  color: #DBD8E3;
 }
 
 

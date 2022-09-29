@@ -18,7 +18,7 @@ import { BUILDER_PAGE } from '../../redux/types';
 
 const Builder: React.FC = () => {
 
-  const [saved, setSaved] = useState(false);
+  const [saved, setSaved] = useState<boolean>(false);
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const state = useSelector((state: AppState) => state);
   const dispatch = useDispatch();

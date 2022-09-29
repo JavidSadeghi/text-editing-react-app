@@ -11,13 +11,11 @@ import {
 } from '../types';
 
 export interface AppState {
-  texts: {}[],
   currentPage: string,
   theme: string,
 }
 
 const initialState = {
-  texts: [],
   currentPage: BUILDER_PAGE,
   theme: LIGHT,
 }

@@ -1,10 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-
-
-
-// Type
-// import { BIOGRAPHY_PAGE } from '../../redux/types';
 
 // Styles
 import styles from './BiographyModal.module.css';
@@ -17,19 +12,19 @@ import emailIcon from '../../assets/iconmonstr-mail-thin.svg';
 
 type NewProps = {
   closeBioModal: () => void;
+  theme: string;
 }
 
 
 
 const BiographyModal: React.FC<NewProps> = (props) => {
 
-
   const closeHandler = () => {
     props.closeBioModal();
   }
 
   return (
-    <div className={styles.modal}>
+    <div className={`${styles.modal} ${styles[props.theme]}`}>
       <div className={styles.container}>
         <div className={styles.closeBtn} onClick={() => closeHandler()}>
           <img src={closeIcon} alt='Close' />
